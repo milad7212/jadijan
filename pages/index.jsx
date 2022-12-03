@@ -32,7 +32,7 @@ export default function Home() {
             src="/images/jadi.png"
             width={500}
             height={500}
-            className="rounded-xl"
+            className="rounded-xl shadow-lg"
             alt="جادی"
           />
           <div className="absolute left-0 top-0 p-2 flex flex-col items-center">
