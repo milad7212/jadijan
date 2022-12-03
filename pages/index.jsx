@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-ciBackBeauty p-2">
+    <div className="bg-ciBackBeauty p-3">
       <div className="flex justify-end flex-col items-end">
         <Image
           src="/images/jadi.png"
@@ -13,7 +13,7 @@ export default function Home() {
         />
         <button className="py-4 px-2 bg-ciGreen rounded-lg font-black">
           {" "}
-          من به یادتم هنوز...
+          من به یادتم ...
         </button>
       </div>
 
