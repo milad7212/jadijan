@@ -8,8 +8,8 @@ function index() {
       </div>
       <div className="flex flex-wrap">
         {
-          ([1, 1, 1, 1, 1, 1, 1].map((e) => (
-            <div className=" flex relative mx-2">
+          ([1, 1, 1, 1, 1, 1, 1].map((e,i) => (
+            <div key={i} className=" flex relative mx-2">
               <span className="h-6 w-[1px] bg-gray-200 mx-[3px]"></span>
               <span className="h-6 w-[1px] bg-gray-200 mx-[3px]"></span>
               <span className="h-6 w-[1px] bg-gray-200 mx-[3px]"></span>
