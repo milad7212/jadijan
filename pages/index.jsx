@@ -81,11 +81,7 @@ export default function Home() {
             className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
             placeholder="نام و نام خانوادگی"
           />
-          {valueTextArea.length > 2 && (
-            <div className=" absolute left-3 bottom-4">
-              <GrSend fontSize={25} className="text-ciRed " />
-            </div>
-          )}
+         
         </div>
       </div>
       <div className="max-w-5xl mx-auto p-3">
