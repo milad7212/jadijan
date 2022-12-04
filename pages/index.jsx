@@ -2,14 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { RiHeart3Fill, RiContactsBook2Fill } from "react-icons/ri";
 import { GiTeacher, GiBrickWall } from "react-icons/gi";
-import {GrSend} from 'react-icons/gr';
-import {VscGithub} from 'react-icons/vsc'
+import { GrSend } from "react-icons/gr";
+import { VscGithub } from "react-icons/vsc";
 import Link from "next/link";
 import { useState } from "react";
 
-
 export default function Home() {
-  const [valueTextArea, setValueTextArea] = useState("")
+  const [valueTextArea, setValueTextArea] = useState("");
   return (
     <div className="bg-ciBackBeauty p-3 min-h-screen">
       <div className="flex items-center">
@@ -20,9 +19,15 @@ export default function Home() {
           <span className="text-ciRed font-black mx-1 ">یاد تو</span>
           <span className="">در خاطری آمد.</span>
         </p>
-        <a href="https://github.com/milad7212/jadijan" className=" mr-auto" target='blank'>
-
-        <VscGithub fontSize={25} className="text-ciComment   cursor-pointer" />
+        <a
+          href="https://github.com/milad7212/jadijan"
+          className=" mr-auto"
+          target="blank"
+        >
+          <VscGithub
+            fontSize={25}
+            className="text-ciComment   cursor-pointer"
+          />
         </a>
       </div>
       <div className="flex items-center mt-4">
@@ -52,10 +57,10 @@ export default function Home() {
               />
             </Link>
             <Link href="/lessons">
-            <RiContactsBook2Fill
-              fontSize={30}
-              className="text-ciComment mt-2 cursor-pointer hover:animate-ping "
-            />
+              <RiContactsBook2Fill
+                fontSize={30}
+                className="text-ciComment mt-2 cursor-pointer hover:animate-ping "
+              />
             </Link>
           </div>
           <div className="absolute bottom-0">
@@ -67,21 +72,40 @@ export default function Home() {
         </div>
       </div>
       <div className="max-w-5xl mx-auto p-3">
+        <p className=" text-gray-400 ">
+          <span className="">نام</span>
+          <span className="text-xs mr-2">(اختیاری)</span>
+        </p>
+        <div className="relative">
+          <input
+            className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
+            placeholder="نام و نام خانوادگی"
+          />
+          {valueTextArea.length > 2 && (
+            <div className=" absolute left-3 bottom-4">
+              <GrSend fontSize={25} className="text-ciRed " />
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="max-w-5xl mx-auto p-3">
         <p className=" my-2 text-gray-400 ">درسی که از جادی یاد گرفتم :</p>
         <div className="relative">
           <textarea
             className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
             placeholder="درسی که از جادی یاد گرفتم ..."
             value={valueTextArea}
-            onChange={(v)=>setValueTextArea(v.target.value)}
+            onChange={(v) => setValueTextArea(v.target.value)}
             name=""
             id=""
             cols="5"
             rows="5"
           ></textarea>
-           {valueTextArea.length>2 && <div className=" absolute left-3 bottom-4">
-             <GrSend fontSize={25} className="text-ciRed " />
-           </div>}
+          {valueTextArea.length > 2 && (
+            <div className=" absolute left-3 bottom-4">
+              <GrSend fontSize={25} className="text-ciRed " />
+            </div>
+          )}
         </div>
       </div>
     </div>
