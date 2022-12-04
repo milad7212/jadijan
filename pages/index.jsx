@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { RiHeart3Fill, RiContactsBook2Fill } from "react-icons/ri";
 import { GiTeacher, GiBrickWall } from "react-icons/gi";
-import {GrSend} from 'react-icons/gr'
+import {GrSend} from 'react-icons/gr';
+import {VscGithub} from 'react-icons/vsc'
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,6 +20,10 @@ export default function Home() {
           <span className="text-ciRed font-black mx-1 ">یاد تو</span>
           <span className="">در خاطری آمد.</span>
         </p>
+        <a href="https://github.com/milad7212/jadijan" className=" mr-auto" target='blank'>
+
+        <VscGithub fontSize={25} className="text-ciComment   cursor-pointer" />
+        </a>
       </div>
       <div className="flex items-center mt-4">
         <GiTeacher fontSize={25} className="text-ciComment " />
