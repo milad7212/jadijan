@@ -4,9 +4,11 @@ import { RiHeart3Fill, RiContactsBook2Fill } from "react-icons/ri";
 import { GiTeacher, GiBrickWall } from "react-icons/gi";
 import {GrSend} from 'react-icons/gr'
 import Link from "next/link";
+import { useState } from "react";
 
 
 export default function Home() {
+  const [valueTextArea, setValueTextArea] = useState("")
   return (
     <div className="bg-ciBackBeauty p-3 min-h-screen">
       <div className="flex items-center">
@@ -65,14 +67,16 @@ export default function Home() {
           <textarea
             className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
             placeholder="درسی که از جادی یاد گرفتم ..."
+            value={valueTextArea}
+            onChange={(v)=>setValueTextArea(v.target.value)}
             name=""
             id=""
             cols="5"
             rows="5"
           ></textarea>
-           <div className=" absolute left-3 bottom-4">
+           {valueTextArea.length>2 && <div className=" absolute left-3 bottom-4">
              <GrSend fontSize={25} className="text-ciRed " />
-           </div>
+           </div>}
         </div>
       </div>
     </div>
