@@ -2,24 +2,26 @@ import Head from "next/head";
 import Image from "next/image";
 import { RiHeart3Fill, RiContactsBook2Fill } from "react-icons/ri";
 import { GiTeacher, GiBrickWall } from "react-icons/gi";
+import {GrSend} from 'react-icons/gr'
 import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <div className="bg-ciBackBeauty p-3">
+    <div className="bg-ciBackBeauty p-3 min-h-screen">
       <div className="flex items-center">
         <RiHeart3Fill fontSize={25} className="text-ciRed animate-pulse" />
         <p className="mr-2 text-gray-500">
           <span className="font-bold ml-[2px]">598</span>
           <span className=""> بار </span>
-          <span className="text-ciRed font-black mx-1">یاد تو</span>
+          <span className="text-ciRed font-black mx-1 ">یاد تو</span>
           <span className="">در خاطری آمد.</span>
         </p>
       </div>
       <div className="flex items-center mt-4">
         <GiTeacher fontSize={25} className="text-ciComment " />
         <p className="mr-2 text-gray-500 flex">
-          <span className="font-bold ml-[2px]">598</span>
+          <span className="font-bold ml-[2px]">354</span>
           <span className="block"> درس</span>
           <span className="text-ciComment font-black mx-1">از تو</span>
           <span className="">به جا مانده.</span>
@@ -59,14 +61,19 @@ export default function Home() {
       </div>
       <div className="max-w-5xl mx-auto p-3">
         <p className=" my-2 text-gray-400 ">درسی که از جادی یاد گرفتم :</p>
-        <textarea
-          className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
-          placeholder="درسی که از جادی یاد گرفتم ..."
-          name=""
-          id=""
-          cols="5"
-          rows="5"
-        ></textarea>
+        <div className="relative">
+          <textarea
+            className="w-full rounded-lg shadow-md outline-none placeholder:text-ciComment font-bold  p-3 bg-gray-200 focus-within:border-2 focus-within:ring-4"
+            placeholder="درسی که از جادی یاد گرفتم ..."
+            name=""
+            id=""
+            cols="5"
+            rows="5"
+          ></textarea>
+           <div className=" absolute left-3 bottom-4">
+             <GrSend fontSize={25} className="text-ciRed " />
+           </div>
+        </div>
       </div>
     </div>
   );
